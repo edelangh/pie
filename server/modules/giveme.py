@@ -1,10 +1,11 @@
 
 from subprocess import Popen, PIPE
+import config
 import re
 
 module_name = 'giveme'
 
-cmd = 'curl http://localhost:8000/chat/opencanal/benjamin'
+cmd = 'curl http://'+config.node_ip+'/chat/opencanal/benjamin'
 
 def interest(input):
 	res = re.search('.*give.*me.*', input);

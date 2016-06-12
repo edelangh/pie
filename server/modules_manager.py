@@ -1,13 +1,13 @@
-from modules_dir import *
-import modules_dir
+from modules import *
+import modules
 import inspect
 
-modules = []
+modulesTab = []
 
-for m in modules_dir.__dict__.iteritems():
+for m in modules.__dict__.iteritems():
 	if inspect.ismodule(m[1]):
 		try:
 			print 'module loaded: ' + m[1].module_name
-			modules.append(m[1])
+			modulesTab.append(m[1])
 		except AttributeError:
 			continue 

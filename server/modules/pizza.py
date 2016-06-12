@@ -1,6 +1,7 @@
 import win32clipboard
 import json
 import re
+import config
 from subprocess import Popen, PIPE
 
 #import urllib2
@@ -18,7 +19,7 @@ except: # For Python 3
 module_name = 'helpme'
 
 def interest(input):
-	res = re.search('.*help.*', input);
+	res = re.search('.*pizza.*', input);
 	return res != None
 
 def input(input):
@@ -50,8 +51,8 @@ def input(input):
 	return "i have found " + nb + ' helps'
 	'''
 	question = data
-	url = "http://stackoverflow.com/search"
-	params = {'lang':'en','tag':'python', 'q': question}
+        url = "https://commande.dominos.fr/eStore/fr/ConfirmPayment/Adyen"
+        params = {'paymentMethod': 'CreditCard'}
 
 	url_parts = list(urlparse.urlparse(url))
 	query = dict(urlparse.parse_qsl(url_parts[4]))
@@ -60,7 +61,7 @@ def input(input):
 	res = urlparse.urlunparse(url_parts)
 	print res
 	question = res
-	url = "http://192.168.0.12:8000/tasks/benjamin/open"
+	url = "http://"+config.node_ip+"/tasks/benjamin/open"
 	params = {'url': question}
 
 	url_parts = list(urlparse.urlparse(url))

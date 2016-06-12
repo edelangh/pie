@@ -1,9 +1,15 @@
 
+# Add app path in PythonPath
+
+import sys
+import os
+sys.path.append(os.getcwd())
+
 # Data
 import data
 
 # Module
-from modules_manager import modules
+from modules_manager import modulesTab
 
 # os execv
 from os import system
@@ -56,14 +62,14 @@ def say(text):
 
 # ============ start =============
 
-print modules
+print modulesTab
 
 say(data.hello)
 
 while True:
 	input = getinput()
 	print 'New input: ' + input
-	for m in modules:
+	for m in modulesTab:
 		if m.interest(input):
 			res = m.input(input)
                         res = res.lower();
