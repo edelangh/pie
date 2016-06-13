@@ -1,9 +1,9 @@
 {
 	"location": "/",
 	"type": "proxy",
-	"port": 12500,
+	"port": 9779,
 	"tmux": {
 		"pwd": ".",
-		"cmd": "npm i && node index.js"
+		"cmd": "cd app && npm i && node index.js"
 	}
 }

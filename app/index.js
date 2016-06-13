@@ -1,40 +1,20 @@
 var http = require('http');
 var fs = require('fs');
-
-function get(url) {
-return (new Promise(function (resolve, reject){
-      var req = http.get({
-        host: '192.168.0.12',
-        path: url,
-        port: 8080
-      }, function (response) {
-        var body = '';
-        response.on('data', function (d) {
-          body += d;
-        });
-        response.on('end', function () {
-          resolve(body);
-        });
-      });
-    }))
-}
-
 var express = require('express');
 var https = require('https');
 var http = require('http');
 var app = express();
-
 var pkey = fs.readFileSync('priv.pem');
 var pcert = fs.readFileSync('cert.cer')
-
 var options = {
-	    key: pkey,
-		    cert: pcert
+	  key: pkey,
+		cert: pcert
 };
+var port = process.env.PORT || 9779;
 
-
-http.createServer(app).listen(8000);
-https.createServer(options, app).listen(443);
+http.createServer(app).listen(port);
+// https.createServer(options, app).listen(443);
+console.log('server start on ' + port)
 
 var canal = [];
 

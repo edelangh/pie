@@ -38,7 +38,7 @@ def input(input):
 	res = urlparse.urlunparse(url_parts)
 	print res
 	question = res
-	url = "http://"config.node_ip"/tasks/benjamin/open"
+	url = "http://"+config.node_ip+"/tasks/benjamin/open"
 	params = {'url': question}
 
 	url_parts = list(urlparse.urlparse(url))
