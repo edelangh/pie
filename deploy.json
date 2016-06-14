@@ -3,7 +3,7 @@
 	"type": "proxy",
 	"port": 9779,
 	"tmux": {
-		"pwd": ".",
-		"cmd": "cd app && npm i && node index.js"
+		"pwd": "app",
+		"cmd": "npm i && node index.js"
 	}
 }

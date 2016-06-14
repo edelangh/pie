@@ -1,0 +1,27 @@
+{
+  "name": "pie-api",
+  "version": "1.0.0",
+  "description": "api for pie",
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.7.1",
+    "express": "^4.13.4",
+    "fs": "0.0.2",
+    "http": "0.0.0",
+    "https": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gogs.cmc.im/edelangh/pie"
+  },
+  "keywords": [
+    "pie",
+    "text_to_speech"
+  ],
+  "author": "edelangh",
+  "license": "ISC"
+}
