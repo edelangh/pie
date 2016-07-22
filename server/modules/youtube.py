@@ -65,4 +65,4 @@ def input(input):
 	res = urlparse.urlunparse(url_parts)
 	print res
 	proc = Popen('curl \'' + res + '\'', stdout=PIPE)
-	return 'ok, i will open your favority song for you'
+	return 'ok, i will open it for you'

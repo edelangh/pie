@@ -48,4 +48,4 @@ def input(input):
 	res = urlparse.urlunparse(url_parts)
 	print res
 	proc = Popen('curl \'' + res + '\'', stdout=PIPE)
-	return 'ok, i will open google for your needs'
+	return 'ok, i will open god for your needs'

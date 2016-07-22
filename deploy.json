@@ -1,9 +1,12 @@
 {
 	"location": "/",
-	"type": "proxy",
-	"port": 9779,
-	"tmux": {
+	"type": "nixservice",
+	"buildCmd": {
+    "pwd": "app",
+    "cmd": "npm i"
+	},
+	"args": {
 		"pwd": "app",
-		"cmd": "npm i && node index.js"
+		"cmd": "${pkgs.nodejs}/bin/node index.js"
 	}
 }
